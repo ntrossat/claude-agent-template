@@ -1,6 +1,6 @@
 # Ohara instructions
 
-Ohara at https://ohara.trossat.com/docs is the source of truth for documentation and engineering guidelines.
+Ohara, the MCP server in `.mcp.json`, is the source of truth for documentation and engineering guidelines.
 
 ## Docs
 
