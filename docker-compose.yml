@@ -1,0 +1,22 @@
+services:
+  app:
+    build: .
+    env_file: .env
+    ports:
+      # Local only: the chat has no sign-in.
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - data:/data
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: rebuild
+          path: backend
+        - action: rebuild
+          path: frontend
+          ignore:
+            - node_modules/
+            - dist/
+
+volumes:
+  data:

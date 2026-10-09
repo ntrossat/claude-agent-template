@@ -1,8 +1,24 @@
 # agent-template
 
-Template for Claude agent projects, wired to [Ohara](https://ohara.trossat.com/docs) for docs and engineering guidelines.
+A template for building agents with the Claude Agent SDK: a chat in the browser, an agent on the server, one Docker image.
 
-- `.mcp.json` registers the Ohara MCP server.
-- `.claude/settings.json` allows Ohara's read-only tools.
-- `.claude/rules/ohara.md` tells Claude how to use the guidelines and keep docs in sync.
-- `docs/` holds this project's docs, synced to Ohara (see `.ohara.yml`).
+## Features
+
+- **Chat.** Replies stream in as the agent writes them, and each tool call shows as it happens.
+- **Your docs as context.** The agent reads your team's docs and guidelines through an Ohara MCP server, read-only.
+- **Resumable.** A reload or a restart keeps the conversation. "New chat" starts over.
+- **Self-hosted.** One container, one data volume, one required variable.
+
+## Principles
+
+- Simple and solid by design: few moving parts, few dependencies.
+- The agent only gets the tools you give it. Built-in tools are off.
+- Docs live in [`docs/`](docs/README.md) and stay in sync with the code through Ohara.
+
+## Get started
+
+See [Development](docs/development.md) to run it, and [Architecture](docs/architecture.md) for how it works.
+
+## License
+
+Apache-2.0.

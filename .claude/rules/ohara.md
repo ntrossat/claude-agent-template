@@ -22,7 +22,11 @@ Ohara at https://ohara.trossat.com/docs is the source of truth for documentation
 
 ## Project docs
 
-None yet. Pages added to `docs/` appear in Ohara under `apps/claude-agent-template/`.
+| Page | What it covers |
+|---|---|
+| `docs/README.md` (`apps/claude-agent-template`) | Overview: what the template is, the stack, and how docs sync with Ohara |
+| `docs/architecture.md` (`apps/claude-agent-template/architecture`) | Components, a chat turn and its events, routes, state, tools, and access |
+| `docs/development.md` (`apps/claude-agent-template/development`) | Run locally, configuration, tests, layout, deploy, and conventions |
 
 ## Workflow
 
