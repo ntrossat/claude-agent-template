@@ -1,4 +1,4 @@
-# agent-template
+# Claude agent template
 
 A template for building agents with the Claude Agent SDK: a chat in the browser, an agent on the server, one Docker image.
 
@@ -18,6 +18,10 @@ A template for building agents with the Claude Agent SDK: a chat in the browser,
 ## Get started
 
 See [Development](docs/development.md) to run it, and [Architecture](docs/architecture.md) for how it works.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) to report a vulnerability.
 
 ## License
 
