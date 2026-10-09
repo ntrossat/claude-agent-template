@@ -78,6 +78,15 @@ export default function Chat() {
     setMessages((current) => [...current.slice(0, -1), update(current[current.length - 1])]);
   }
 
+  // Shows the error, and drops the reply placeholder when the turn failed before writing anything.
+  function fail(message: string) {
+    setMessages((current) => {
+      const reply = current[current.length - 1];
+      return reply?.role === "assistant" && !reply.text && reply.tools.length === 0 ? current.slice(0, -1) : current;
+    });
+    setError(message);
+  }
+
   function handleEvent(event: ChatEvent) {
     switch (event.type) {
       case "text":
@@ -91,7 +100,7 @@ export default function Chat() {
         setSessionId(event.session_id);
         break;
       case "error":
-        setError(event.message);
+        fail(event.message);
         break;
     }
   }
@@ -107,7 +116,7 @@ export default function Chat() {
     try {
       await sendMessage(text, sessionId, handleEvent);
     } catch {
-      setError("The server can't be reached. Check that it is running, then send your message again.");
+      fail("The server can't be reached. Check that it is running, then send your message again.");
     } finally {
       setBusy(false);
     }
