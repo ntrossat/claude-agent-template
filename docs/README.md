@@ -1,10 +1,10 @@
 # Claude agent template
 
-A starting point for agents built on the Claude Agent SDK. It ships a chat in the browser that talks to a FastAPI backend, which runs the agent through the SDK. The agent reads your team's docs through the Ohara MCP server.
+A starting point for agents built on the Claude Agent SDK. It ships a chat in the browser that talks to a FastAPI backend, which runs the agent through the SDK. As shipped, the agent answers questions about Ohara from Ohara's own docs, read through the Ohara MCP server.
 
 | Page | Covers |
 |---|---|
-| [Architecture](architecture.md) | Components, how a chat turn flows, where state lives, and how to add a tool |
+| [Architecture](architecture.md) | Components, how a chat turn flows, where state lives, tools, and the system prompt |
 | [Development](development.md) | Run it locally, configure it, test it, and deploy it |
 
 ## Stack
