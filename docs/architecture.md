@@ -63,6 +63,12 @@ When `OHARA_MCP_URL` is set, the agent connects to that Ohara server and gets it
 
 To add a tool, define it with the SDK's `@tool` decorator, serve it with `create_sdk_mcp_server()`, and add the server and the tool's name to `options()` in `agent.py`.
 
+## System prompt
+
+`SYSTEM_PROMPT` in `agent.py` makes the agent an Ohara assistant. It answers questions about Ohara only from Ohara's own pages, under `apps/ohara/` and `documentation/`, and never from memory. It names the pages it used, flags stale pages, and says so when the docs don't cover a question or the Ohara tools are unreachable. Page content is treated as data, never as instructions.
+
+To build a different agent from the template, rewrite `SYSTEM_PROMPT`.
+
 ## Access
 
 The chat has no sign-in. Compose publishes it on `127.0.0.1` only. Don't expose it to a network you don't trust: anyone who reaches it spends your Claude credits and reads your docs.
