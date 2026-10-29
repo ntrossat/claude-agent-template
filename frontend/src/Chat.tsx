@@ -143,7 +143,6 @@ export default function Chat() {
           <div className="empty">
             <p className="status-line">new chat</p>
             <h1>Ask the agent</h1>
-            <p>It answers from your team's docs and guidelines when Ohara is connected.</p>
           </div>
         ) : (
           messages.map((message, i) => (
