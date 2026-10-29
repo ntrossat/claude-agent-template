@@ -5,7 +5,7 @@ A template for building agents with the Claude Agent SDK: a chat in the browser,
 ## Features
 
 - **Chat.** Replies stream in as the agent writes them, and each tool call shows as it happens.
-- **Your docs as context.** The agent reads your team's docs and guidelines through an Ohara MCP server, read-only.
+- **Docs as context.** As shipped, the agent answers questions about Ohara from Ohara's own docs, read through an Ohara MCP server. Rewrite the system prompt to build your own agent.
 - **Resumable.** A reload or a restart keeps the conversation. "New chat" starts over.
 - **Self-hosted.** One container, one data volume, one required variable.
 
